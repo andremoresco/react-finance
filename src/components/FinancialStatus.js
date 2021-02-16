@@ -5,28 +5,22 @@ class FinancialStatus extends Component {
 
     render() {
         return (
-            <div className="p-1 flex flex-col lg:flex-row">
-                <div className="w-full md:flex md:flex-row" >
-                    <div className="m-1 md:w-1/2">
+            <div className="p-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="m-1">
                         <BalanceMonth/>
                     </div>
 
-                    <div className="m-1 md:w-1/2">
-                        <BalanceMonth/>
-                    </div>
-                </div>
-
-                <div className="w-full md:flex md:flex-row">
-                    <div className="m-1 md:w-1/2" >
+                    <div className="m-1">
                         <BalanceMonth/>
                     </div>
 
-                    <div className="m-1 md:w-1/2" >
+                    <div className="m-1" >
                         <BalanceMonth/>
                     </div>
-                </div>
 
-
+                    <div className="m-1" >
+                        <BalanceMonth/>
+                    </div>
             </div>
         )
     }

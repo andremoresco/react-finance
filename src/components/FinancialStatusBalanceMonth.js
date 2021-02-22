@@ -1,32 +1,14 @@
 import React, {Component} from 'react'
-import { getBalanceByMonth } from '../service/BalanceService'
+
 import  arrowUp  from '../assets/circle_green_arrow-up.svg'
 import  arrowDown  from '../assets/red_arrow-down.svg'
 import DefaultBlock from './DefaultBlock'
 
 class BalanceMonth extends Component {
 
-    state = {
-        balance: {
-            incomes: 0,
-            expenses: 0,
-            balance: 0
-        }
-    }
-
-    componentDidMount() {
-        
-        getBalanceByMonth()
-        .then(response => {
-            this.setState({
-                balance: response
-            })
-        })
-    }
-
     render() {
 
-        const { balance } = this.state;
+        const { balance } = this.props;
 
         return (
             <DefaultBlock title="Balanço mensal">
@@ -39,7 +21,7 @@ class BalanceMonth extends Component {
                         <div className="p-1 w-full">
                             Receitas
                         </div>
-                        <div className="p-1 w-full text-right font-semibold text-green-700">
+                        <div className="p-1 w-full text-right font-normal text-green-700">
                             R$ {balance.incomes}
                         </div>
                     </div>
@@ -52,7 +34,7 @@ class BalanceMonth extends Component {
                         <div className="p-1 w-full" >
                             Despesas
                         </div>
-                        <div className="p-1 w-full text-right font-semibold  text-red-600">
+                        <div className="p-1 w-full text-right font-normal  text-red-600">
                             R$ {balance.expenses}
                         </div>
                     </div>
@@ -63,7 +45,7 @@ class BalanceMonth extends Component {
                         <div className="p-1 w-full" >
                             
                         </div>
-                        <div className="p-1 w-full text-right font-semibold ">
+                        <div className="p-1 w-full text-right font-normal ">
                             R$ {balance.balance}
                         </div>
                     </div>

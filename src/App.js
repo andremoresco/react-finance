@@ -7,14 +7,14 @@ class App extends Component {
         return (
             <div className="h-screen bg-gray-100 flex flex-row">
                 <div className="m-2 hidden sm:flex-1 sm:flex sm:w-1/4">
-                    Menu
+                    
                 </div>
                 <div className="m-2 w-full sm:w-3/4 lg:w-2/4 rounded-2xl shadow-md bg-gray-200">
                     <Dashboard/>
                 </div>
 
                 <div className="m-2 hidden lg:flex-1 lg:flex lg:w-1/4">
-                    perfil
+                    
 
                 </div>
 
